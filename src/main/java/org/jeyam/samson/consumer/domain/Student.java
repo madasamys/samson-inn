@@ -1,6 +1,7 @@
 package org.jeyam.samson.consumer.domain;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -81,7 +82,16 @@ public class Student
             builder.append(getAge(), otherObject.getAge());
             return builder.isEquals();
         }
-
         return false;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        HashCodeBuilder builder = new HashCodeBuilder();
+        builder.append(getFirstName());
+        builder.append(getLastName());
+        builder.append(getAge());
+        return builder.hashCode();
     }
 }
