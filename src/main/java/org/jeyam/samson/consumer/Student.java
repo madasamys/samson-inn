@@ -1,4 +1,4 @@
-package org.jeyam.samson.consumer.domain;
+package org.jeyam.samson.consumer;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -6,12 +6,14 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
+
 /**
  * @author: madasamy
  * @version: 0.1
  */
 @Document
-public class Student
+public class Student implements Serializable
 {
     @Id
     private String id;

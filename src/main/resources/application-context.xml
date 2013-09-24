@@ -18,7 +18,7 @@
     <!-- Define the MongoTemplate which handles connectivity with MongoDB -->
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg name="mongo" ref="mongo"/>
-        <constructor-arg name="databaseName" value="spring-demo-xml"/>
+        <constructor-arg name="databaseName" value="samson-inn"/>
     </bean>
 
     <!-- Factory bean that creates the Mongo instance -->
@@ -29,5 +29,7 @@
 
     <!-- Use this post processor to translate any MongoExceptions thrown in @Repository annotated classes -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <!--<bean class="org.jeyam.samson.consumer.StudentService"></bean>-->
 
 </beans>

@@ -3,7 +3,8 @@ package org.jeyam.samson.consumer.service;
 import com.foursquare.fongo.Fongo;
 import com.lordofthejars.nosqlunit.mongodb.MongoDbRule;
 import com.mongodb.Mongo;
-import org.jeyam.samson.consumer.domain.Student;
+import org.jeyam.samson.consumer.Student;
+import org.jeyam.samson.consumer.StudentService;
 import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
@@ -25,9 +26,9 @@ import static com.lordofthejars.nosqlunit.mongodb.MongoDbRule.MongoDbRuleBuilder
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author: madasamy
- * @version: 0.1
- */
+* @author: madasamy
+* @version: 0.1
+*/
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration//(locations = "classpath:application-context.xml")
 public class StudentServiceTest
@@ -40,7 +41,7 @@ public class StudentServiceTest
     private ApplicationContext applicationContext;
 
     @Autowired
-    private IStudentService studentService;
+    private StudentService studentService;
 
     @After
     public void tearDown()
@@ -92,7 +93,7 @@ public class StudentServiceTest
 
     @Configuration
     @EnableMongoRepositories
-    @ComponentScan(basePackages = {"org.jeyam.samson.consumer.service"})
+    @ComponentScan(basePackages = {"org.jeyam.samson.consumer"})
     // modified to not load configs from com.johnathanmarksmith.mongodb.example.MongoConfiguration
     @PropertySource("classpath:application-test.properties")
     static class PersonRepositoryTestConfiguration extends AbstractMongoConfiguration
@@ -114,7 +115,7 @@ public class StudentServiceTest
         @Override
         protected String getMappingBasePackage()
         {
-            return "org.jeyam.samson.consumer.domain";
+            return "org.jeyam.samson.consumer";
         }
 
     }

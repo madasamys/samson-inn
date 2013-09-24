@@ -1,5 +1,6 @@
 package org.jeyam.samson.consumer.domain;
 
+import org.jeyam.samson.consumer.Student;
 import org.junit.Before;
 import org.junit.Test;
 

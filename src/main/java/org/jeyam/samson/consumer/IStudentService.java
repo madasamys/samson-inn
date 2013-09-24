@@ -1,6 +1,6 @@
-package org.jeyam.samson.consumer.service;
+package org.jeyam.samson.consumer;
 
-import org.jeyam.samson.consumer.domain.Student;
+import org.jeyam.samson.consumer.Student;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
