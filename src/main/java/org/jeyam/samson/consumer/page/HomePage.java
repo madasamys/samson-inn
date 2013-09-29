@@ -1,4 +1,4 @@
-package org.jeyam.samson.consumer;
+package org.jeyam.samson.consumer.page;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
@@ -6,6 +6,8 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.jeyam.samson.consumer.domain.Student;
+import org.jeyam.samson.consumer.service.StudentService;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

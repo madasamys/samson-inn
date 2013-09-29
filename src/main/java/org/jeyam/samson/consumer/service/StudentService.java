@@ -1,5 +1,6 @@
-package org.jeyam.samson.consumer;
+package org.jeyam.samson.consumer.service;
 
+import org.jeyam.samson.consumer.domain.Student;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -30,6 +30,6 @@
     <!-- Use this post processor to translate any MongoExceptions thrown in @Repository annotated classes -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
 
-    <!--<bean class="org.jeyam.samson.consumer.StudentService"></bean>-->
+    <!--<bean class="org.jeyam.samson.consumer.service.StudentService"></bean>-->
 
 </beans>

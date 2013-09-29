@@ -3,8 +3,7 @@ package org.jeyam.samson.consumer.service;
 import com.foursquare.fongo.Fongo;
 import com.lordofthejars.nosqlunit.mongodb.MongoDbRule;
 import com.mongodb.Mongo;
-import org.jeyam.samson.consumer.Student;
-import org.jeyam.samson.consumer.StudentService;
+import org.jeyam.samson.consumer.domain.Student;
 import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
@@ -93,7 +92,7 @@ public class StudentServiceTest
 
     @Configuration
     @EnableMongoRepositories
-    @ComponentScan(basePackages = {"org.jeyam.samson.consumer"})
+    @ComponentScan(basePackages = {"org.jeyam.samson.consumer.service"})
     // modified to not load configs from com.johnathanmarksmith.mongodb.example.MongoConfiguration
     @PropertySource("classpath:application-test.properties")
     static class PersonRepositoryTestConfiguration extends AbstractMongoConfiguration
@@ -115,7 +114,7 @@ public class StudentServiceTest
         @Override
         protected String getMappingBasePackage()
         {
-            return "org.jeyam.samson.consumer";
+            return "org.jeyam.samson.consumer.domain";
         }
 
     }

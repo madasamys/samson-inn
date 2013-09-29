@@ -1,4 +1,4 @@
-package org.jeyam.samson.consumer;
+package org.jeyam.samson.consumer.domain;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
