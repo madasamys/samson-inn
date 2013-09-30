@@ -10,6 +10,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
+import javax.inject.Named;
 import java.util.List;
 
 /**
@@ -17,6 +18,7 @@ import java.util.List;
  * @version: 0.1
  */
 @Repository
+@Named
 public class StudentService //implements IStudentService
 {
     static final Logger logger = LoggerFactory.getLogger(StudentService.class);

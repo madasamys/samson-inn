@@ -6,8 +6,12 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.jeyam.samson.consumer.domain.Student;
+import org.jeyam.samson.consumer.service.IStudentService;
 import org.jeyam.samson.consumer.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,6 +19,9 @@ public class HomePage extends WebPage
 {
     ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
     StudentService studentService = context.getBean(StudentService.class);
+
+    //    @SpringBean
+//    private StudentService studentService;
     private static final long serialVersionUID = 1L;
     private Student student = new Student();
 
@@ -35,7 +42,7 @@ public class HomePage extends WebPage
         return form;
     }
 
-        // TODO Add your page's components here
+    // TODO Add your page's components here
 
     private TextField<String> createNameField()
     {
