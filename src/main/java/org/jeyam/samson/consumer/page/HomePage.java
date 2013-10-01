@@ -17,11 +17,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class HomePage extends WebPage
 {
-    ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-    StudentService studentService = context.getBean(StudentService.class);
-
-    //    @SpringBean
-//    private StudentService studentService;
+    @SpringBean
+    private StudentService studentService;
     private static final long serialVersionUID = 1L;
     private Student student = new Student();
 
