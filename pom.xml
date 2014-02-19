@@ -22,8 +22,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jeyam.samson</groupId>
     <artifactId>samson-inn</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
+    <modules>
+        <module>samson-inn-common</module>
+        <module>samson-inn-webapp</module>
+    </modules>
     <!-- TODO project name  -->
     <name>samson-inn</name>
     <description>Compute bill</description>

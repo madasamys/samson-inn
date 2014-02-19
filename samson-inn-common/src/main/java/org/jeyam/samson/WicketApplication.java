@@ -1,10 +1,8 @@
 package org.jeyam.samson;
 
-import org.apache.wicket.application.IComponentInstantiationListener;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
-import org.jeyam.samson.consumer.page.HomePage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -21,7 +19,7 @@ public class WicketApplication extends WebApplication
     @Override
     public Class<? extends WebPage> getHomePage()
     {
-        return HomePage.class;
+        return null;
     }
 
     /**
