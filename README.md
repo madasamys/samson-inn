@@ -8,6 +8,10 @@ Clone
 
 git clone https://github.com/swotge/samson-inn
 
+Note
+-----
+Still it is in incubator do not experiment with that
+
 
 
 
